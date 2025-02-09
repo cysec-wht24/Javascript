@@ -1,4 +1,6 @@
-//  Primitive
+//Based on how data is stored in memory and accessed, data can be categorized into two types.
+
+// Primitive Data Types: Simple, immutable, and stored directly (by value) in stack.
 
 //  7 types : String, Number, Boolearn, null, undefined, Symbol, BigInt
 
@@ -16,9 +18,7 @@ console.log(id === anotherId);
 
 // const bigNumber = 3456543576654356754n
 
-
-
-// Reference (Non primitive)
+// Reference (Non primitive) => Complex, mutable, and stored as references (by reference) in heap memory.
 
 // Array, Objects, Functions
 
