@@ -60,9 +60,5 @@ splice(): It will update the original array, Gives the extracted array as output
 concat(): It will combine 2 arrays and gives the new array
 spread operator: think glass of water, when glass fall ➜ water spread to the ground : remember
 In spread operator, we will get the spread out values
-flat(): This method is used to flatten the array, we need to mention the depth as a pramater
-Array.isArray(): To check the given array is array or not, it will give true or false response
-Array.from(): this method will convert any given number/name into array
-If we pass an array in from, then we need to mention, do we need to create the array for keys or values
-Array.of() : Will give the newly formed array, will convert any values into new array
+
 */
