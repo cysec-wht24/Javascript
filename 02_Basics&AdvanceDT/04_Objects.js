@@ -105,3 +105,23 @@ console.log(instructor);
     {},
     {}
 ]
+
+/* 
+
+=> Object destructuring is a syntactically sugar, means it only provide the syntax.
+=> Object destructuring helps in avaoiding the repeatability of the code.
+=> In Object destructuring, we are extracting the property from object. 
+=> We can rename the destructure value using colon :
+=> When we go to the restaurant and order something, the menu card is API Documentation
+=> When we order 'Samosa', we should not worry how it is made, just we have cOnsume it, 
+    Somosa is created at the backend, same goes with API.
+=> JSON is almost written like object, but key, value pair are stored in string 
+    json { "name": "hitesh", "coursename" : "js in hindi" } 
+=> Use the url : https://api.github.com/users/hiteshchoudhary
+=> Use the API ➜ As the value is into JSON ➜ convert in javascript object ➜ use it, enjoy.
+=> Famous API: Random user me: https://randomuser.me/ ➜ use https://randomuser.me/api/
+=> We can beautify the JSON using JSON Formatter online editor: https://jsonformatter.org/ ➜ we can beautify the JSON and 
+    check it into tree structure ➜ after this we can see how can we deal with it, may be using array or object.
+
+*/
+
