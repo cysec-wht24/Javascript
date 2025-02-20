@@ -48,7 +48,7 @@ function loginUserMessage(username = "sam"){
 
     => We can resue the package, as much as we want
 
-    => To write a function, we give function keywoes, function
+    => To write a function, we give function keywords, function
      name, then pranthesis then scope of function, this is called function defination
     
     => To call the function, we function name with parenthesis, 
