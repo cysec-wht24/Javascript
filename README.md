@@ -44,3 +44,34 @@
 | **Ecosystem**          | Massive (mature)    | Small (growing)       |  
 
 ---
+
+### **4. Bun**
+- **What it is**: A fast, modern JavaScript runtime and toolkit (alternative to Node.js and Deno)  
+- **Created by**: Jarred Sumner (released in 2022)  
+- **Core Tech**: Built on **JavaScriptCore** (the engine used in WebKit/Safari)  
+- **Purpose**:  
+  - Run JavaScript/TypeScript code (server-side)  
+  - Replace multiple tools (runtime, package manager, bundler, test runner)  
+  - Optimize performance for modern development workflows  
+- **Key Features**:  
+  - Extremely fast startup and execution times  
+  - Built-in package manager (compatible with npm packages)  
+  - Native bundler and test runner  
+  - Native TypeScript support (no configuration needed)  
+  - ES Modules (`import` syntax) by default  
+  - Secure by default (explicit permissions for file/network access)
+
+---
+
+### **Node.js vs Deno.js vs Bun**
+| Feature                | Node.js              | Deno.js               | Bun                   |
+|------------------------|----------------------|-----------------------|-----------------------|
+| **Engine**             | V8 (Chrome)          | V8 (Chrome)           | JavaScriptCore (Safari) |
+| **Modules**            | CommonJS (`require`) | ES Modules (`import`) | ES Modules (`import`) |
+| **Package Manager**    | npm/yarn             | URL imports           | Built-in (npm-compatible) |
+| **Security**           | Full system access   | Permission flags      | Permission flags      |
+| **TypeScript**         | Needs config         | Built-in              | Built-in              |
+| **Performance**        | Moderate             | Faster than Node.js   | Extremely fast        |
+| **Ecosystem**          | Massive (mature)     | Small (growing)       | Growing               |
+
+---

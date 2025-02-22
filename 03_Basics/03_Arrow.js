@@ -1,3 +1,8 @@
+/* 
+=> ES6 came in 2015 and came with lots of new features
+=> Arrow function and this keyword are the features of ES6 
+*/
+
 const user = {
     username: "hitesh",
     price: 999,
@@ -8,12 +13,23 @@ const user = {
     }
 
 }
+/* 
+
+=> this keyword tells about current context
+=> When we refer to the current context of the object, we use this keyword 
+
+*/
 
 // user.welcomeMessage()
-// user.username = "sam"
+// user.username = "sam" // this will change the current context making sam be the username
 // user.welcomeMessage()
 
-// console.log(this);
+
+/* Here below `this` points to empty object as we are in node environment, where 
+    current object points to empty object */
+
+// console.log(this); 
+
 
 // function chai(){
 //     let username = "hitesh"
