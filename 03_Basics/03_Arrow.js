@@ -1,6 +1,8 @@
 /* 
+
 => ES6 came in 2015 and came with lots of new features
 => Arrow function and this keyword are the features of ES6 
+
 */
 
 const user = {
@@ -25,46 +27,88 @@ const user = {
 // user.welcomeMessage()
 
 
-/* Here below `this` points to empty object as we are in node environment, where 
-    current object points to empty object */
+/* Here below `this` points to empty(current context) object as we are in node environment, where 
+    current context points to empty object as there is no context in global */
 
 // console.log(this); 
 
+/*
+ => Node javascript engine is stand alone, earlier javascript engine was only in a browser
+ => In brower there is a global object called window object tabhi toh aap window ke saare event capture kar paate hai
+    which all come in use in DOM
+ */
 
-// function chai(){
-//     let username = "hitesh"
-//     console.log(this.username);
-// }
-
-// chai()
-
-// const chai = function () {
-//     let username = "hitesh"
-//     console.log(this.username);
-// }
-
-const chai =  () => {
-    let username = "hitesh"
-    console.log(this);
+    // normal function
+/* function chai() {
+    let username = "may"
+    console.log(this); // Object [global]
 }
 
+chai() */
 
-// chai()
+// function expression
+/* const chai = function () {
+    let username = "may"
+    console.log(this.username) // undefined
+}
 
-// const addTwo = (num1, num2) => {
-//     return num1 + num2
-// }
+chai() */
 
-// const addTwo = (num1, num2) =>  num1 + num2
+// arrow function
+/* const chai = () => {
+    let username = "may"
+    console.log(this.username) // undefined
+}
 
-// const addTwo = (num1, num2) => ( num1 + num2 )
+chai()  */
 
-const addTwo = (num1, num2) => ({username: "hitesh"})
+// Note: this keyword can be accessible in normal function, act as a global object but not in arrow function
 
+const chai = () => {
+    let username = "may"
+    console.log(this) // {}
+}
 
-console.log(addTwo(3, 4))
+chai() 
 
+// () => {} basic arrow function syntax, 
 
-// const myArray = [2, 5, 3, 7, 8]
+const some = () => {} // can store it inside a vairiable
 
-// myArray.forEach()
+const addTwo = (num1, num2) => { // can give parameters like this
+    return num1 + num2 // Explicit return
+}
+
+console.log(addTwo(3,4))
+
+/* // Implicit Return
+const addTwo = (num1, num2) => num1 + num2
+console.log(addTwo(3,4)) 
+OR
+const addTwo = (num1, num2) => (num1 + num2)
+console.log(addTwo(3,4))
+*/
+
+// Used a lot in React
+// conclusion => curly braces {} use huya toh return likhna padega
+//  but parenthesis () use huya toh return nahi use karna hoga
+
+// say we want to return object, how ?
+
+/* 
+const testing = (num1, num2) => {username: "May"}
+console.log(testing(3,4)) // undefined 
+*/
+
+const testing = (num1, num2) => ({username: "May"}) // correct way
+console.log(testing(3,4)) // { username: 'May' }
+
+const myArray = [2, 5, 3, 7, 8]
+
+// myArray.forEach(function () {}) // classic function
+
+// arrow function
+// myArray.forEach(() => {}) 
+    // OR
+// myArray.forEach(() => ())
+    //DIscussed in Loops
