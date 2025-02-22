@@ -90,8 +90,8 @@ console.log(addTwo(3,4))
 */
 
 // Used a lot in React
-// conclusion => curly braces {} use huya toh return likhna padega
-//  but parenthesis () use huya toh return nahi use karna hoga
+// Note: Curly braces {} -> then need to use return
+//  but Parenthesis () -> no need to add the return keyword
 
 // say we want to return object, how ?
 
@@ -102,6 +102,7 @@ console.log(testing(3,4)) // undefined
 
 const testing = (num1, num2) => ({username: "May"}) // correct way
 console.log(testing(3,4)) // { username: 'May' }
+// Note: To return the object, we should wrap in parenthesis
 
 const myArray = [2, 5, 3, 7, 8]
 
