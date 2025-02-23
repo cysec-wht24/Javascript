@@ -34,7 +34,7 @@ const obj4 = {5: "a", 6: "b"}
 // causes the multiple array combined in one array aproblem
 // const obj3 = { obj1, obj2 }
 
-//better approach
+// Better approach
 // const obj3 = Object.assign({}, obj1, obj2, obj4) 
 // first element is target object in this case {} is target object
 
