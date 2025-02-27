@@ -7,7 +7,7 @@ const myObject = {
     swift: "swift by apple"
 }
 
-for (const key in myObject) {
+for (const key in myObject) { // Syntax
     //console.log(`${key} shortcut is for ${myObject[key]}`);
 }
 
@@ -27,3 +27,7 @@ for (const key in programming) {
 //     console.log(key);
 // }
 
+/* 
+=> To retrive value from object, we use objectName[key]
+=> Maps are not iterable so we cant use for..in loop for Map
+ */

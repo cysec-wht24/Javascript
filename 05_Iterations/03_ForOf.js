@@ -1,7 +1,7 @@
 // for-in, for-of, forEach: Array Specific loops.
 
 // ["", "", ""] -> strings in array
-// [{}, {}, {}] -> objects in array
+// [{}, {}, {}] -> objects in array - used a lot in ForEach
 // these can be iterated using higher order array loops
 
 /* Syntax of for...of loop:

@@ -4,6 +4,11 @@ const coding = ["js", "ruby", "java", "python", "cpp"]
 //     console.log(val);
 // } )
 
+// coding.forEach( greet = () => { // now no need to name it (ie- is "greet" here)
+//     console.log(item);
+// } )
+
+
 // coding.forEach( (item) => {
 //     console.log(item);
 // } )
