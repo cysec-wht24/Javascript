@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- 
+    => DOM is document object model, The webpage is created from object like head, body etc
+    => DOM tells how the page structure is all about, It also tell the document object is made 
+        up of which object, so we can manipulate the page
+    => To see the details of browser method see console.log(window)
+    => focus on window.document object instead of complex objects
+    => As window.document is so common object, we can access document object directly as well console.log(document)
+    => console.dir(document) it will give all the hidden details as well, that were missing using console.log(document)
+    => In DOM, everything is node, like head, body etc only tells what type of html it is
+    
+    Example: document.getElementById('firstHeading')
+    so we will be getting the element of that id.
+   
+    document.getElementById('firstHeading').innerHTML = "<h1>Chai aur code<h1/>"
+
+    So in this we can add, remove, apply filters to the element in DOM manipulation
+    Learn all the above basic rather focusing on any framework
+
+        -->
+    <title>DOM learning</title>
+    <style>
+        .bg-black{
+            background-color: #212121;
+            color: #fff;
+        }
+    </style>
+</head>
+<body class="bg-black">
+    <div >
+        <h1  id="title" class="heading">DOM learning on Chai aur code <span style="display: none;">test text</span></h1>
+        <h2>Lorem ipsum dolor sit.</h2>
+        <h2>Lorem ipsum dolor sit.</h2>
+        <h2>Lorem ipsum dolor sit.</h2>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <input type="password" name="" id="">
+
+        <ul>
+            <li class="list-item">one</li>
+            <li class="list-item">two</li>
+            <li class="list-item">three</li>
+            <li class="list-item">four</li>
+        </ul>
+    </div>
+</body>
+</html>
