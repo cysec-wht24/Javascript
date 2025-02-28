@@ -113,3 +113,5 @@ const myArray = [2, 5, 3, 7, 8]
     // OR
 // myArray.forEach(() => ())
     //DIscussed in Loops
+
+    

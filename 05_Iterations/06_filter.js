@@ -2,17 +2,49 @@
 
 
 // const values = coding.forEach( (item) => {
-//     //console.log(item);
+//     //console.log(item); // does not return any value 
 //     return item
 // } )
-
 // console.log(values);
+
+
+/* 
+=> forEach dont return any value, either you wanted or not
+
+=> filter return some values
+
+=> filter is having callback function which has access to each element, then 
+    we have to give the condition. If the condition is satisfies then return
+     those values else dont return the values */
 
 const myNums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
 // const newNums = myNums.filter( (num) => {
-//     return num > 4
+//     num > 4 // in arrow fnction lecture we talked about when we start a scope then we have to write return 
 // } )
+
+// const newNums = myNums.filter( (num) => {
+//     return num > 4 // 
+// } )
+
+// console.log(newNums);
+
+/* 
+Explicit Return: When you use curly braces {} to define the body of the arrow function, 
+    you must explicitly use the return keyword to return a value. This is called explicit return.
+
+const newNums = myNums.filter((num) => {
+    return num > 4; // Explicit return
+});
+
+Here, the return keyword is explicitly used to return the result of the condition num > 4.
+
+Implicit Return: When you omit the curly braces {} and write the function body as a single 
+    expression, the result of that expression is automatically returned. This is called implicit return.
+
+const newNums = myNums.filter((num) => num > 4); // Implicit return
+
+Here, the expression num > 4 is implicitly returned without needing the return keyword. */
 
 // const newNums = []
 
