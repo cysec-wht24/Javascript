@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM | Chai aur code</title>
+</head>
+
+<!-- 
+
+=> Focus on selecting element then apply methods to manipulate it.
+=> Behind the scene, document understand it as className not class
+
+We can get attribute using:
+  document.getElementById('title').getAttribute('id')
+
+
+    We should remember not to override the existing attribute
+
+  document.getElementById('title').setAttribute('class','test heading')
+
+    here, new class is test, existing class is heading
+    We can set the styling of element as below,
+
+  const title = document.getElementById("title");
+  title.style.backgroundColor = 'green'
+
+How to add the content
+
+We will be using textContent, innerHTML, innerText
+
+InnerContent vs InnerText: 
+=>InnerText will give the text which is visible, but InnerContent will give the text which is hidden as well.
+=>InnerHTML will give the complete value
+=>In real time, we will be using other query selector, like querySelector, querySelectorAll etc Example:
+
+  document.querySlector('h1')
+  //we will be getting the 1st h1 element
+
+querySelector is quite similar to jquery
+
+Example:
+  document.querySelector('#title');
+  //we can use othe selectors as well, like class selector
+  document.querySelector('.heading');
+  // we can select the input slector as well
+  document.querySlector(input);
+  //we can select the attribute as well
+  document.querySelector('input[type="password"]')
+  //select 1st child of paragraph
+  document.querySelector('p:first-child');
+
+    Try to use emmet shortcuts, how sir is using, Example: To write 3 list item, use ul>;i*3
+    We can select element and manipulate the element as below Example:
+
+  const myUl = document.querySelector('ul');
+  myUl.querySelector('li')
+  const turnGreen = myUl.querySelector('li')
+  turnGreen.style.backgroundColor = "green"
+  turnGreen.style.padding = "10px";
+  turnGreen.innerText = "five"
+
+    Remember, querySelector will only gives 1 value
+    To select all list item, use querySelectorAll()
+    Nodelist are not pure array
+
+  const tempLiList = document.querySelectorAll('li');
+  tempLiList[0].style.color = "green"
+  // to manipulate whole details, we can use forEach loop
+  tempLiList.forEach(l=>{
+    l.style.backgroundColor = 'green'
+  })
+
+In querySelectorAll, it is important to know what datatype it is returning
+Scenario: We need to apply class on each element of list
+Array.from(): This method will convert nodelist into the array
+
+const tempClassList = document.getElementsByClassName('list-item');
+Array.from(tempClassList);
+
+const myConvertedArray = Array.from(tempClassList);
+myConvertedArray.forEach(function(li){
+    li.style.color = "orange"
+})
+
+- we can manipulate the page value as
+```javascript
+   const myH2 = document.querySelectorAll('.mw-headline')
+   myH2.forEach(function(h){
+       h.style.color = "black"
+       h.style.backgroundColor = "green"
+       h.style.color = "white"
+       h.style.padding = "10px"
+       h.innerText = "Sarfaraz"
+   })
+
+-->
+
+<body style="background-color: #212121; color: #fff;">
+    <div class="parent">
+        <!-- this is a comment -->
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+    </div>
+</body>
+<script>
+    const parent = document.querySelector('.parent')
+    // console.log(parent);
+    // console.log(parent.children);
+    // console.log(parent.children[1].innerHTML);
+
+    // for (let i = 0; i < parent.children.length; i++) {
+    //      console.log(parent.children[i].innerHTML);
+        
+    // }
+    parent.children[1].style.color = "orange"
+    // console.log(parent.firstElementChild);
+    // console.log(parent.lastElementChild);
+
+    const dayOne = document.querySelector('.day')
+    // console.log(dayOne);
+    // console.log(dayOne.parentElement);
+    // console.log(dayOne.nextElementSibling);
+
+    console.log("NODES: ", parent.childNodes);
+</script>
+</html>
