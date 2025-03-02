@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai aur code </title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    
+</body>
+<script>
+    const div = document.createElement('div')
+    console.log(div);
+    div.className = "main"
+    div.id = Math.round(Math.random() * 10 + 1)
+    div.setAttribute("title", "generated title")
+    div.style.backgroundColor = "green"
+    div.style.padding = "12px"
+    
+    // div.innerText = "Chai aur code" 
+    //OR
+    const addText = document.createTextNode("Chai aur code")
+    div.appendChild(addText)
+
+    // Which method is better requires real and practical knowledge of DSA, not theoretical BS
+
+    document.body.appendChild(div)
+</script>
+</html>
+
+
+=> We will focus here on relations, like parent-child relation, parent-parent relations etc
+=> Scenario: we need to create the element ➜ create the query from DB ➜ Set into array ➜ display in UI
+=> Play with DOM to add or remove an element 
+=> to create div with 4 elements use shortcut: div.day*4
+=> Lets check the value in the parent
+=> parent.children will give the list of html collection
+=> To select 1 element in array: parent.children[0]
+=> To access the inner value of it, we can use parent.children[0].innerHTML
+=> We can create the new element using document.createElement('div'), so here div is created
+=> The document wcument will be visible when it is attached using appenChild method
