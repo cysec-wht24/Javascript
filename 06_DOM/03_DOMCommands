@@ -1,0 +1,96 @@
+/* https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model */
+
+document.getElementById('title') 
+document.getElementById('title').id
+document.getElementById('title').class // undefined
+document.getElementById('title').className 
+// Document potrays it as class but behind the scene it is read as className, 
+// whenever we write html in js (in react called jsx) then we don't call it class 
+// but className as first it conflicts with className and second when we make structure in DOM we call it className.
+
+document.getElementById('title').getAttribute()// you need to tell inside which attribut you want
+document.getElementById('title').getAttribute('id')
+document.getElementById('title').getAttribute('class')
+document.getElementById('title').setAttribute('id')
+document.getElementById('title').setAttribute('class', 'test') // test is the value of the class attribute, note that this command always overwrite the previous attribute if you don't want to do that say for example a class where heading attribute is set is overwrited by this command to test which you don't want well you can do that by the below command
+document.getElementById('title').setAttribute('class', 'test heading')    
+
+const title = document.getElementById('title') 
+title.style.backgroundColor = 'orange'
+title.style.padding = "15px"
+title.style.borderRadius = "15px"
+
+# To add Content we use 
+title.textContent
+title.innerHTML
+title innerText
+
+# InnerContent vs InnerText: InnerText will give the text which is visible, but InnerContent will give the text which is hidden as well.
+# InnerHTML will give the complete value
+
+document.getElementbyClassName('heading')
+
+# querySelector is quite similar to jquery
+
+document.querySelector('h1')
+document.querySelector('#title')
+document.querySelector('.heading')
+document.querySelector('input[type="password"]')
+document.querySelector('p:first-child')
+
+const myul = document.querySelector('ul')
+const turGreen = myul.querySelector('li')
+turGreen.style.backgroundColor = "green"
+
+turGreen.style.padding = "10px"
+
+turGreen.innerText = "five"
+
+// here above talked about how to select a single element
+# Remember, querySelector will only gives 1 value, To select all list item, use querySelectorAll()
+
+# Nodelist are not pure array
+# => A NodeList is an array-like object that represents a collection of DOM nodes, 
+# but it is not a true JavaScript array. It lacks many of the methods and features that arrays have, 
+# and it behaves differently in some cases (e.g., being live). If you need to use array methods on a NodeList, 
+# you can convert it to an array using Array.from() or the spread operator ([...nodeList]).
+ 
+const tempLiList = document.querySelectorAll('li');
+tempLiList.style.color = "green" # won't work
+tempLiList[0].style.color = "green" # you have to specify the element
+// to manipulate whole details, we can use forEach loop
+tempLiList.forEach(function (l) {
+  l.style.backgroundColor = 'green'
+})
+
+tempLiList.forEach(l=>{
+    l.style.backgroundColor = 'green'
+  })
+
+#   HTMLCollection
+
+#     An array-like, live collection of element nodes (e.g., <div>, <p>).
+
+#     Returned by methods like getElementsByClassName, getElementsByTagName, or element.children.
+
+#     Automatically updates when the DOM changes.
+
+#     Does not include text nodes or comment nodes.
+
+#     Lacks array methods like forEach, map, etc.
+
+#     HTMLCollection is element-only and always live.
+
+# NodeList
+
+#     An array-like collection of nodes (elements, text nodes, comment nodes, etc.).
+
+#     Returned by methods like querySelectorAll or element.childNodes.
+
+#     Can be live (e.g., childNodes) or static (e.g., querySelectorAll).
+
+#     Supports forEach in modern browsers but lacks other array methods.
+
+#     Can include non-element nodes like text or comments.
+
+#     NodeList can include any node type and can be live or static.
