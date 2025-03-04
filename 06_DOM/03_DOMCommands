@@ -2,7 +2,7 @@
 
 document.getElementById('title') 
 document.getElementById('title').id
-document.getElementById('title').class // undefined
+document.getElementById('title').class # undefined
 document.getElementById('title').className 
 // Document potrays it as class but behind the scene it is read as className, 
 // whenever we write html in js (in react called jsx) then we don't call it class 
