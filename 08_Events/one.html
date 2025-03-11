@@ -1,0 +1,105 @@
+ <!-- 
+
+=> All events in js runs sequentially, js is a sequentially run language
+=> But in asynchronous programming, we deviate the sequence and come back, 
+    same like browser event, it acitivate in browser events.
+
+    -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>htnml Events </title>
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+    <h2>Amazing image</h2>
+    <div >
+        <ul id="images">
+            <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop"></li>
+            <li><img width="200px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="" ></li>
+            <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+        </ul>
+   </div>
+</body>
+<script>
+    // document.getElementById('owl').onclick = function(){ // gives less features
+    //     alert("owl clicked")
+    // }
+
+     // attachEvent() - during internet explorer era
+    // during jQuery - on
+
+    // type, timestamp, defaultPrevented
+    // target, toElement, srcElement, currentTarget,
+    // clientX, clientY, screenX, screenY
+    // altkey, ctrlkey, shiftkey, keyCode
+
+    // document.getElementById('images').addEventListener('click', function(e){
+    //     console.log("clicked inside the ul");
+    // }, false) // this is by default false so no need to write it
+
+/* 
+   => Write a logic that is scalable in javascript, so better avoid writing onclick on button in js.
+   => Dont write simply onclick event but use addEventListener, as it will give much detail like 
+            propogation, or gives less features if use onclick. 
+   => Event Propogation is of 2 types, Event bubbling(default), Event capturing.
+   => If we add the addEventlistener on parent and child, we should think, which will be clicked first?.
+   => The answer is Event bubbling, means the event propogates from low to high. Here 1st from li then ul.
+   => For Event Capturing just change the default to true (event capturing mode) this will cause the reverse
+    effect where when clicked event propogates from high to low.
+*/
+
+    // document.getElementById('owl').addEventListener('click', function(e){
+    //     console.log("owl clicked");
+    //     e.stopPropagation()
+    // }, false)
+
+ /* 
+   => If we apply e.stopPropogation, then event will not propogate to the parent.
+ */
+    
+/*     
+    document.getElementById('google').addEventListener('click', function(e) {
+    e.preventDefault(); // Prevents the browser from navigating to Google
+    e.stopPropagation(); // Prevents the event from bubbling up the DOM tree
+    console.log("google clicked"); // Logs "google clicked" to the console
+  }, false); 
+  
+  */
+
+  /* 
+   
+=> Scenario: Form Validation Before Submission
+    You want to ensure that the user has filled out all required fields in a form before 
+    allowing the form to be submitted. If the form is invalid, you want to prevent the 
+    submission and show an error message.
+
+  */
+   
+    
+    document.querySelector('#images').addEventListener('click', function(e){
+        console.log(e.target.tagName);
+        if (e.target.tagName === 'IMG') {
+            console.log(e.target.id);
+            let removeIt = e.target.parentNode
+            removeIt.remove()
+        }
+    
+        /* 
+            => e.target: it will give the targeted element
+            => e.target.parentNode: Here, we can select the parent element.
+            => remove(): It will remove the element from nodeList.
+            => removeChild(): It will remove the child element from parent Node.
+        */
+        
+    })
+    
+            //removeIt.parentNode.removeChild(removeIt)
+</script>
+</html>
+ 
