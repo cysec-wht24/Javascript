@@ -9,3 +9,13 @@ There are 2 types of code in javascript
     Blocking Code: Block the flow of the program ➜ Read the file
     Non-Blocking Code:Does not block execution ➜ Read file Async
 
+    JS Engine - aka the alone js execution engine, made out of memory heap and call stack
+
+    Web API - Only present in browser by WebAPI we mean a sort of Runtime so it can be Deno, Node these are all environment, if we have WebAPI we would have access to DOM API from browser console or else not
+
+    Task Queue - it is what makes js so fast asynchronous
+
+    Promise - Has high priority queue (has diff names.)
+
+    Everytime a program is executed it’s call stack is made, inside which a global execution context is made, and one by one functions are loaded, as the functions are executed they are unloaded fom the stack whereas in memory heap memory allocation takes place
+
