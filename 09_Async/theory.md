@@ -19,3 +19,8 @@ There are 2 types of code in javascript
 
     Everytime a program is executed it’s call stack is made, inside which a global execution context is made, and one by one functions are loaded, as the functions are executed they are unloaded fom the stack whereas in memory heap memory allocation takes place
 
+    # 2 Projects
+
+    handler - callback function that has no name
+    Made used of asynchronous capablity by using setTimeOut event
+    Onchange of start button change the background color, after every sec background color should change.
