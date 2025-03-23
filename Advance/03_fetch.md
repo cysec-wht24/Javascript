@@ -13,6 +13,8 @@ Documentation read by browsers - https://fetch.spec.whatwg.org/#fetch-method
 
 => Special queue is created for fetch in event loop or called as "Micro task queue or Priority queue or fetch queue", It is VIP line.
 
+// say response = fetch("something)
+
 fetch works in 2 parts:-
 => Variables or memory to reserve DATA space: This one works first before Web Browser To reserve the memory space, we may call data, other is arrays, onFulfilled(promise - resolve()), onRejection(promise - reject()) inside both of which we get function. We can't access those arrays. These are private field although data is also private field.
 => Web browser based API/ Nodejs API: Here nodejs add the feature of brower, It will handle the web API ➜ From it(Node/Web API) will call the network request ➜ either we will get the date then it goes to onfulfilled or if no data found it goes to onRejection.
