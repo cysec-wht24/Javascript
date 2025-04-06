@@ -79,6 +79,44 @@ function loginUserMessage(username = "sam"){
         it means get all the values and give me in bundle.
     
     => Example: Get all the values in cart value
+
+    There is also something called the spread operator with the same syntax (...<object>)
+    serves a slightly different purpose. Both the spread and rest operators use the same 
+    syntax (...), but their roles depend on the context:
+
+    Spread Operator: Used to expand or "spread" elements of an iterable (like an array) 
+    or properties of an object into a new array or object. For example, 
+    in { ...user, email: e.target.value }, it copies all properties from user and then 
+    updates the email property.
+
+    Rest Operator: Used to collect the remaining elements or properties into a new array 
+    or object. For instance, in function parameters like function foo(a, b, ...others), 
+    the others variable will be an array of any additional arguments passed to the function.
+
+    So while they share the same syntax, their functionality is context-dependent: one 
+    spreads out values, and the other collects them.
+
+    Explanation with Examples
+    Spread Operator:
+    const numbers = [1, 2, 3];
+    const moreNumbers = [...numbers, 4, 5]; // [1, 2, 3, 4, 5]
+    
+    const user = { name: "Alice", age: 25 };
+    const updatedUser = { ...user, email: "alice@example.com" };
+    // updatedUser is { name: "Alice", age: 25, email: "alice@example.com" }
+
+    
+    Rest Operator:
+     // In function parameters:
+    function sum(a, b, ...others) {
+      return a + b + others.reduce((acc, curr) => acc + curr, 0);
+    }
+    sum(1, 2, 3, 4); // Returns 10
+    
+    // In object destructuring:
+    const person = { name: "Bob", age: 30, city: "New York" };
+    const { name, ...details } = person;
+    // name is "Bob" and details is { age: 30, city: "New York" }
     
     */
 
